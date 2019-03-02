@@ -1,6 +1,7 @@
 const http = require('http');
 
 http.createServer((req, res) => {
-	res.writeHead(200, {'Content-Type': 'text/html'});
-	res.end('jenkins test');
+	res.writeHead(200, {'Content-Type': 'application/json'});
+	let json = JSON.stringify({test: 'jenkins test'});
+	res.end(json);
 }).listen(9000);
